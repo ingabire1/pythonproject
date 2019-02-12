@@ -12,20 +12,20 @@ class TestUser(unittest.TestCase):
 
     # Items up here .......
 
-    def setUp(self):
-        '''
-        Set up method to run before each test cases.
-        '''
-        self.new_user = User("details","username","password") # create user object
+    # def setUp(self):
+    #     '''
+    #     Set up method to run before each test cases.
+    #     '''
+    #     self.new_user = User("details","username","password") # create user object
 
 
     def test_init(self):
         '''
         test_init test case to test if the object is initialized properly
-        # '''
-        # self.assertEqual(self.new_details.names,"Muriuki James")
-        # self.assertEqual(self.new_username,"0712345678")
-        # self.assertEqual(self.new_password,"james@ms.com")
+        '''
+        self.assertEqual(self.new_details.names,"Muriuki James")
+        self.assertEqual(self.new_username,"0712345678")
+        self.assertEqual(self.new_password,"james@ms.com")
 
 
 if __name__ == '__main__':
