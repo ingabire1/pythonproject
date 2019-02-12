@@ -24,12 +24,12 @@ class TestUser(unittest.TestCase):
         test_init test case to test if the object is initialized properly
         '''
         self.assertEqual(self.new_details.names,"Muriuki James")
-        # self.assertEqual(self.new_username,"0712345678")
-        # self.assertEqual(self.new_password,"james@ms.com")
+        self.assertEqual(self.new_username,"0712345678")
+        self.assertEqual(self.new_password,"james@ms.com")
 
 
-if __name__ == '__main__':
-    unittest.main()
+# if __name__ == '__main__':
+#     unittest.main()
 
 
  def test_delete_user(self):
