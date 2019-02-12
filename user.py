@@ -45,8 +45,8 @@ if attempts==3:
     print("Username and password entered correctly.")
          # Username and password match - do something here
 
-else:
-    print("Username entered incorrectly.")
-    attempts += 1
+# else:
+#     print("Username entered incorrectly.")
+#     attempts += 1
 
 
