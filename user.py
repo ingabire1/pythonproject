@@ -8,19 +8,19 @@ class User:
 
       # docstring removed for simplicity
     
-#         self.last_name = username
-#         self.phone_number =login
-#         self.email = password
+        self.last_name = username
+        self.phone_number =login
+        self.email = password
 
-# from hashlib import md5
-# from getpass import getpass
-# import sys
+from hashlib import md5
+from getpass import getpass
+import sys
 
-print("Hello!") 
+# print("Hello!") 
 
-attempts = 0
-check_username ="A-B-C-D-E-F-G-H-I-J-K-L-M-N-O-P-Q-R-S-T-U-V-W-X-Y-Z"
-check_password = "1,2,3,4,5,6,7,8,9,10,11,12,13,14,15,16,17,18,19,20,21,22,23,24,25,26,27,28,29,30,"
+# attempts = 0
+# check_username ="A-B-C-D-E-F-G-H-I-J-K-L-M-N-O-P-Q-R-S-T-U-V-W-X-Y-Z"
+# check_password = "1,2,3,4,5,6,7,8,9,10,11,12,13,14,15,16,17,18,19,20,21,22,23,24,25,26,27,28,29,30,"
 # These hashes have been generated earlier on.
 # This is not how you would go about storing usernames and passwords,
 # but for the sake of simplicity, we'll do it like this.
