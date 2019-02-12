@@ -12,11 +12,11 @@ class TestUser(unittest.TestCase):
 
     # Items up here .......
 
-    # def setUp(self):
-    #     '''
-    #     Set up method to run before each test cases.
-    #     '''
-    #     self.new_user = User("details","username","password") # create user object
+    def setUp(self):
+        '''
+        Set up method to run before each test cases.
+        '''
+        self.new_user = User("details","username","password") # create user object
 
 
     def test_init(self):
@@ -28,8 +28,8 @@ class TestUser(unittest.TestCase):
         self.assertEqual(self.new_password,"james@ms.com")
 
 
-if __name__ == '__main__':
-    unittest.main()
+# if __name__ == '__main__':
+#     unittest.main()
 
 
  def test_delete_user(self):
