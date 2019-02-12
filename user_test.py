@@ -28,12 +28,12 @@ class TestUser(unittest.TestCase):
         self.assertEqual(self.new_password,"james@ms.com")
 
 
-# if __name__ == '__main__':
-#     unittest.main()
+if __name__ == '__main__':
+    unittest.main()
 
 
- def test_delete_user(self):
-            '''
+#  def test_delete_user(self):
+#             '''
             test_delete_user to test if we can remove a user from our user list
             '''
             self.new_details.save_details()
