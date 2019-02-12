@@ -1,46 +1,24 @@
-import unittest # Importing the unittest module
-from user import user# Importing the user class
+import unittest
+from user import User
+
 
 class TestUser(unittest.TestCase):
-
-    '''
-    Test class that defines test cases for the user class behaviours.
-
-    Args:
-        unittest.TestCase: TestCase class that helps in creating test cases
-    '''
-
-    # Items up here .......
+    """Test class that defines test cases for the user class behaviour"""
 
     def setUp(self):
-        '''
-        Set up method to run before each test cases.
-        '''
-        self.new_user = User("details","username","password") # create user object
-
+        """Set Up Method to run before each test case to check if the class has been instantiated correctly"""
+        self.new_user = User("NewUser", "12345")
 
     def test_init(self):
-        '''
-        test_init test case to test if the object is initialized properly
-        '''
-        self.assertEqual(self.new_details.names,"Muriuki James")
-        self.assertEqual(self.new_username,"0712345678")
-        self.assertEqual(self.new_password,"james@ms.com")
+        """Test to ensure that the object is initialized properly"""
+        self.assertEqual(self.new_user.user_name, "NewUser")
+        self.assertEqual(self.new_user.password, "12345")
+
+    def test_save_user(self):
+        """Method that tests wether an user credentials have been successfully saved"""
+        self.new_user.save_user()
+        self.assertEqual(len(User.user_list), 1)
 
 
-if __name__ == '__main__':
-    unittest.main()
-
-
- def test_delete_user(self):
-            '''
-            test_delete_user to test if we can remove a user from our user list
-            '''
-            self.new_details.save_details()
-            test_username = Username("Test","user","0712345678","test@user.com") # new user
-            test_passowrd.save_password()
-
-            self.new_details.delete_details()# Deleting a user object
-            self.assertEqual(len(username.username_list),1)
 if __name__ == '__main__':
     unittest.main()

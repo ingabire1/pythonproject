@@ -1,33 +1,47 @@
-class credentials :
-    """
-    Class that generates new instances of credentials.
-    """
+class Credentials:
+    """Create class for credentials"""
 
+    def __init__(self, account_name, account_password):
+        self.account_name = account_name
+        self.account_password = account_password
 
-# !/usr/bin/env python
-# -*- coding: utf-8 -*-
-import getpass
+    credentials_list = []
 
+    def save_credentials(self):
+        """Method that saves credential objects into credentials_list"""
+        self.credentials_list.append(self)
 
-user_credentials = ['username', 'password']
+    def delete_credential(self):
+        """Method which deletes a particular credential"""
+        Credentials.credentials_list.remove(self)
 
-def get_user_credentials():
-   username = input('Username: ')
-   password = getpass.getpass('Password: ')   
-   return username, password
+    @classmethod
+    def find_by_name(cls, account_name):
+        """Method that takes in a name and returns a credential that matches that particular name
+        Args:
+            name: account_name that has a password
+        Returns:
+            The account_name and it's corresponding PassWord
+        """
 
-def check_user_credentials(user_credentials):
-   username, password = get_user_credentials()
-   return user_credentials[0] == username and user_credentials[1] == password
+        for credential in cls.credentials_list:
+            if credential.account_name == account_name:
+                return credential
 
-if __name__ == "__main__":
-    login_attempts = 1
-    correct_credentials = check_user_credentials(user_credentials)
-    while not correct_credentials and login_attempts < 3:  
-       print('\nWrong credentials, try again:')  
-       correct_credentials = check_user_credentials(user_credentials)
-       login_attempts += 1
-    if correct_credentials:
-       print('Welcome! Do whatever work you need here ...')
-    else:
-       print('FINISHED!')
+    @classmethod
+    def credential_exists(cls, name):
+        """Method to check whether a credential exists
+        Args:
+        name: name of account to search whether it exists
+        boolean: True or False depending if the contatc exists
+        """
+
+        for credential in cls.credentials_list:
+            if credential.account_name == name:
+                return True
+        return False
+
+    @classmethod
+    def display_credentials(cls):
+        """Method which displays all current credentials"""
+        return cls.credentials_list
