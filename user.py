@@ -32,21 +32,21 @@ while attempts<3:
     # invisible
     print()
 
-username=input('username?')
-password=input('password?')
-if username=='correctusername'and password=='correctpassword':
-    print('you are in!')
-else:
-    attempts+=1
-    print('incorrect!')
-if attempts==3:
-    print('too many attempts')
+# username=input('username?')
+# password=input('password?')
+# if username=='correctusername'and password=='correctpassword':
+#     print('you are in!')
+# else:
+#     attempts+=1
+#     print('incorrect!')
+# if attempts==3:
+#     print('too many attempts')
 
-    print("Username and password entered correctly.")
-         # Username and password match - do something here
+#     print("Username and password entered correctly.")
+#          # Username and password match - do something here
 
-else:
-    print("Username entered incorrectly.")
-    attempts += 1
+# else:
+#     print("Username entered incorrectly.")
+#     attempts += 1
 
 
