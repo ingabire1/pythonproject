@@ -8,13 +8,13 @@ class User:
 
       # docstring removed for simplicity
     
-        self.last_name = username
-        self.phone_number =login
-        self.email = password
+#         self.last_name = username
+#         self.phone_number =login
+#         self.email = password
 
-from hashlib import md5
-from getpass import getpass
-import sys
+# from hashlib import md5
+# from getpass import getpass
+# import sys
 
 print("Hello!") 
 
@@ -45,8 +45,8 @@ if attempts==3:
     print("Username and password entered correctly.")
          # Username and password match - do something here
 
-# else:
-#     print("Username entered incorrectly.")
-#     attempts += 1
+else:
+    print("Username entered incorrectly.")
+    attempts += 1
 
 
