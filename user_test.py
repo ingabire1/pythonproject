@@ -1,31 +1,31 @@
-import unittest # Importing the unittest module
-from user import user# Importing the user class
+# import unittest # Importing the unittest module
+# from user import user# Importing the user class
 
-class TestUser(unittest.TestCase):
+# class TestUser(unittest.TestCase):
 
-    '''
-    Test class that defines test cases for the user class behaviours.
+#     '''
+#     Test class that defines test cases for the user class behaviours.
 
-    Args:
-        unittest.TestCase: TestCase class that helps in creating test cases
-    '''
+#     Args:
+#         unittest.TestCase: TestCase class that helps in creating test cases
+#     '''
 
-    # Items up here .......
+#     # Items up here .......
 
-    def setUp(self):
-        '''
-        Set up method to run before each test cases.
-        '''
-        self.new_user = User("details","username","password") # create user object
+#     def setUp(self):
+#         '''
+#         Set up method to run before each test cases.
+#         '''
+#         self.new_user = User("details","username","password") # create user object
 
 
-    def test_init(self):
-        '''
-        test_init test case to test if the object is initialized properly
-        '''
-        self.assertEqual(self.new_details.names,"Muriuki James")
-        self.assertEqual(self.new_username,"0712345678")
-        self.assertEqual(self.new_password,"james@ms.com")
+#     def test_init(self):
+#         '''
+#         test_init test case to test if the object is initialized properly
+#         '''
+#         self.assertEqual(self.new_details.names,"Muriuki James")
+#         self.assertEqual(self.new_username,"0712345678")
+#         self.assertEqual(self.new_password,"james@ms.com")
 
 
 # if __name__ == '__main__':
