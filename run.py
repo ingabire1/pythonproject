@@ -1,6 +1,7 @@
-import random
+
 from user import User
 from credentials import Credentials
+import random
 
 # Functions to add credentials
 
@@ -43,7 +44,7 @@ def main():
     while True:
         print("Welcome to PassWord Locker.")
         print('\n')
-        print("Use these short codes to select an option: Create New User use 'cu': Login to your account use 'lg' or 'ex' to exit password locker")
+        print("Create New User use 'cu': Login to your account use 'lg' or 'ex' to exit password locker")
         short_code = input().lower()
         print('\n')
 
@@ -58,7 +59,7 @@ def main():
             confirm_password = input()
 
             while confirm_password != created_user_password:
-                print("Sorry your passwords did not match!")
+                print("your passwords did not match!")
                 print("Enter a password")
                 created_user_password = input()
                 print("Confirm Your Password")
@@ -73,7 +74,7 @@ def main():
                 entered_password = input()
 
                 while entered_userName != created_user_name or entered_password != created_user_password:
-                    print("You entered a wrong username or password")
+                    print("wrong username or password")
                     print("Username")
                     entered_userName = input()
                     print("Your Password")
@@ -89,8 +90,7 @@ def main():
                     print("1: View Your saved credentials")
                     print("2: Add new credentials")
                     print("3: Remove credentials")
-                    print("4: Search credentials")
-                    print("5: Log Out")
+                    print("4: Log Out")
                     option = input()
 
                     if option == '2':
@@ -137,9 +137,7 @@ def main():
 
                             else:
                                 print('\n')
-                                print("You don't seem to have any contacts yet")
-                                print('\n')
-
+                               
                             print("Back to Menu? y/n")
 
                             back = input().lower()
@@ -178,33 +176,6 @@ def main():
                                 elif sure == 'n':
                                     continue
 
-                            else:
-                                print("That Contact Does not exist")
-                                break
-
-                    elif option == '4':
-                        while True:
-                            print("Continue? y/n")
-                            option2 = input().lower()
-                            if option2 == 'y':
-                                print("Enter an account name to find credentials")
-
-                                search_name = input()
-
-                                if check_existing_credentials(search_name):
-                                    search_credential = find_credential(search_name)
-                                    print(f"ACCOUNT NAME: {search_credential.account_name} \n PASSWORD: {search_credential.account_password}")
-                                else:
-                                    print("That Contact Does not exist")
-                            elif option2 == 'n':
-                                break
-                            else:
-                                print("Please enter a valid code")
-
-                    else:
-                        print("Please enter a valid code")
-                        continue
-
         elif short_code == 'lg':
             print("WELCOME")
             print("Enter UserName")
@@ -234,8 +205,7 @@ def main():
                 print("1: View Your saved credentials")
                 print("2: Add new credentials")
                 print("3: Remove credentials")
-                print("4: Search credentials")
-                print("5: Log Out")
+                print("4: Log Out")
                 option = input()
 
                 if option == '2':
@@ -294,10 +264,7 @@ def main():
                             continue
                         else:
                             print("Please Enter a valid code")
-                        # elif choice1 == 'n':
-                        #     break
-                        # else:
-                        #     print("Please use y or n")
+                        
                 elif option == '5':
                     print("WARNING! You will loose all your credentials if you log out. Are you sure? y/n")
                     logout = input().lower()
@@ -327,7 +294,7 @@ def main():
                                 continue
 
                         else:
-                            print("That Contact Does not exist")
+                            print("Contact Does not exist")
                             break
 
                 elif option == '4':
@@ -349,11 +316,11 @@ def main():
                         else:
                             print("Please enter a valid code")
                 else:
-                    print("Please enter a valid code")
+                    print("enter a valid code")
         elif short_code == 'ex':
             break
         else:
-            print("Please Enter a valid code to continue")
+            print("Enter a valid code to continue")
 
 
 if __name__ == '__main__':
